@@ -1,0 +1,27 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '12.0'
+use_frameworks!
+
+workspace 'MultiProjects' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  def application_pods
+    pod 'Moya', '~> 13.0'
+  end
+
+  target 'Applicationn' do
+    project 'Application/Application.project'
+    application_pods
+    # Pods for testing
+  end
+  # Pods for Applicationn
+
+  target 'ApplicationnTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'ApplicationnUITests' do
+    # Pods for testing
+  end
+
+end
